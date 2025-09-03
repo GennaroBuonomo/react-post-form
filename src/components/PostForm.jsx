@@ -22,6 +22,9 @@ const PostForm = () => {
 
       <div className="form-check mb-3">
         <input className="form-check-input" type="checkbox" id="public" name="public" />
+        <label className="form-check-label" for="public">
+          Reandilo Pubblico
+        </label>
       </div>
     </form>
    </div>
