@@ -15,8 +15,13 @@ const PostForm = () => {
         <input type="text" className="form-control" id="title" name="title" />
       </div>
 
-      <div className="form-ceck mb-3">
-        
+      <div className="mb-3">
+        <label for="body" className="form-label">Contenuto</label>
+        <textarea className="form-control" id="body" name="body" rows="5"></textarea>
+      </div>
+
+      <div className="form-check mb-3">
+        <input className="form-check-input" type="checkbox" id="public" name="public" />
       </div>
     </form>
    </div>
