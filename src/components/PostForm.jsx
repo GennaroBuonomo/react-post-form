@@ -9,6 +9,15 @@ const PostForm = () => {
         <label for="author" className="form-label">Autore</label>
         <input type="text" className="form-control" id="author" name="author" />
       </div>
+
+      <div className="mb-3">
+        <label for="title" className="form-label" >Titolo</label>
+        <input type="text" className="form-control" id="title" name="title" />
+      </div>
+
+      <div className="form-ceck mb-3">
+        
+      </div>
     </form>
    </div>
   )
