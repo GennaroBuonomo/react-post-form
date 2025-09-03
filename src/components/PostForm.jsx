@@ -26,6 +26,8 @@ const PostForm = () => {
           Reandilo Pubblico
         </label>
       </div>
+
+      <button type="submit" className="btn btn-primary">Invia il Post</button>
     </form>
    </div>
   )
