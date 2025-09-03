@@ -1,8 +1,9 @@
-function App() {
+import PostForm from "./components/PostForm"
 
+function App() {
   return (
     <>
-    <h1>hello men</h1>
+     <PostForm />
     </>
   )
 }
