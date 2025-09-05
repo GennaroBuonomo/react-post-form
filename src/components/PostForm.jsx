@@ -10,7 +10,7 @@ const PostForm = () => {
   })
 
 const handleChange = () => {
-  
+
 }
 
   return (
@@ -32,6 +32,7 @@ const handleChange = () => {
                  type="text"
                  className="form-control"
                  placeholder="autore"
+                 onChange={handleChange}
                  />
               </div>
               <div className="col-12 col-md-4">
@@ -44,6 +45,7 @@ const handleChange = () => {
                  type="text"
                  className="form-control"
                  placeholder="titolo"
+                 onChange={handleChange}
                  />
               </div>
               <div className="col-12 col-md-4">
@@ -52,7 +54,7 @@ const handleChange = () => {
                 </label>
                 <div>
                  <input 
-                  type="checkbox" name="public" checked={formData.public} className="form-check"/>
+                  type="checkbox" name="public" checked={formData.public} onChange={handleChange} className="form-check"/>
                 </div>
               </div>
               <div className="col-12">
@@ -64,8 +66,10 @@ const handleChange = () => {
                  value={formData.body} 
                  id="body" 
                  className="form-control" 
-                 rows="4" placeholder="Testo">
-                </textarea>
+                 rows="4" 
+                 placeholder="Testo"
+                 onChange={handleChange}
+                ></textarea>
               </div>
               <div className="col-12">
                 <button className="btn btn-success">Salva</button>
