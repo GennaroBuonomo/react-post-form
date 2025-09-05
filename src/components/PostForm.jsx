@@ -10,7 +10,7 @@ const PostForm = () => {
   })
 
 const handleChange = () => {
-
+  const { value, name, type, checked } = e.target;
 }
 
   return (
