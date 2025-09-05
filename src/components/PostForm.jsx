@@ -18,6 +18,14 @@ const handleChange = (e) => {
   };
 
   setFormData(newFormData);
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  axios.post("https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts", formData)
+  .then((resp) => {
+    console.log(resp.data);
+  })
 }
 
   return (
@@ -27,7 +35,7 @@ const handleChange = (e) => {
           <h1>Post Form</h1>
         </div>
         <div className="col-12">
-          <form>
+          <form onSabmit={handleSubmit}>
             <div className="row gy-3">
               <div className="col-12 col-md-4">
                 <label htmlFor="" className="form-label">
