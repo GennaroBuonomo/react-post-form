@@ -1,35 +1,80 @@
-import React from 'react'
+import { useState } from "react"
+import axios from "axios"
 
 const PostForm = () => {
+  const [formData, setFormData] = useState({
+    author: "",
+    title: "",
+    public: false, 
+    body: "",
+  })
+
+const handleChange = () => {
+  
+}
+
   return (
-   <div className="container mt-4 text-center">
-    <h1><strong>Crea un nuovo post</strong></h1>
-    <form>
-      <div className="mb-3">
-        <label for="author" className="form-label">Autore</label>
-        <input type="text" className="form-control" id="author" name="author" />
+    <div className="container my-5">
+      <div className="row">
+        <div className="col-12">
+          <h1>Post Form</h1>
+        </div>
+        <div className="col-12">
+          <form>
+            <div className="row gy-3">
+              <div className="col-12 col-md-4">
+                <label htmlFor="" className="form-label">
+                  Autore
+                </label>
+                <input 
+                 name="author"
+                 value={formData.author}
+                 type="text"
+                 className="form-control"
+                 placeholder="autore"
+                 />
+              </div>
+              <div className="col-12 col-md-4">
+                <label htmlFor="" className="form-label">
+                  Titolo
+                </label>
+                <input 
+                 name="title"
+                 value={formData.title}
+                 type="text"
+                 className="form-control"
+                 placeholder="titolo"
+                 />
+              </div>
+              <div className="col-12 col-md-4">
+                <label htmlFor="" className="form-label">
+                  Pubblico
+                </label>
+                <div>
+                 <input 
+                  type="checkbox" name="public" checked={formData.public} className="form-check"/>
+                </div>
+              </div>
+              <div className="col-12">
+                <label htmlFor="" className="form-label">
+                  Testo
+                </label>
+                <textarea 
+                 name="body"
+                 value={formData.body} 
+                 id="body" 
+                 className="form-control" 
+                 rows="4" placeholder="Testo">
+                </textarea>
+              </div>
+              <div className="col-12">
+                <button className="btn btn-success">Salva</button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
-
-      <div className="mb-3">
-        <label for="title" className="form-label" >Titolo</label>
-        <input type="text" className="form-control" id="title" name="title" />
-      </div>
-
-      <div className="mb-3">
-        <label for="body" className="form-label">Contenuto</label>
-        <textarea className="form-control" id="body" name="body" rows="5"></textarea>
-      </div>
-
-      <div className="form-check mb-3">
-        <input className="form-check-input" type="checkbox" id="public" name="public" />
-        <label className="form-check-label" for="public">
-          Reandilo Pubblico
-        </label>
-      </div>
-
-      <button type="submit" className="btn btn-primary">Invia il Post</button>
-    </form>
-   </div>
+    </div>
   )
 }
 
