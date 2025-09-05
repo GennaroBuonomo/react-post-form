@@ -9,8 +9,15 @@ const PostForm = () => {
     body: "",
   })
 
-const handleChange = () => {
+const handleChange = (e) => {
   const { value, name, type, checked } = e.target;
+
+  const newFormData = {
+    ...formData,
+    [name]: type === 'checkbox' ? checked : value,
+  };
+
+  setFormData(newFormData);
 }
 
   return (
